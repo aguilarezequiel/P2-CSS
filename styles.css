@@ -1,0 +1,217 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: whitesmoke;
+}
+
+
+.header {
+    background: linear-gradient(270deg, #3b3b3b, #1f1f1f, #4a4a4a, #2c2c2c);
+    background-size: 800% 800%;
+    animation: bgAnimation 3s ease infinite;
+    padding: 1rem 0;
+}
+
+@keyframes bgAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.text-section {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    margin-top: 2rem;
+}
+
+.text-section .parrafo {
+    margin-left: 2rem;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.text-section .parrafo2 {
+    font-size: 18px;
+    margin-left: 2rem;
+    color: #ff0000;
+}
+
+.text-section .blockquote {
+    border-left: 5px solid;
+    margin-left: 4rem;
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+    text-transform: uppercase;
+    color: #c0c0c0;
+}
+
+/* Sección de cajas */
+.box-section {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    padding: 1rem;
+    margin: 1rem;
+    border: 2px solid black;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.box1 {
+    background-color: #4CAF50;
+}
+
+.box2 {
+    background-color: #f44336;
+    border: 4px solid black; 
+}
+
+
+.position-section {
+    margin: 3rem 0; /
+}
+
+.relativo {
+    position: relative;
+    background-color: #ffeb3b;
+    padding: 20px;
+    margin-bottom: 2rem; 
+    border: 2px solid black;
+    height: 150px; 
+}
+
+.absoluto {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #03a9f4;
+    padding: 10px;
+    border: 2px solid black;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+@media (max-width: 768px) {
+    body {
+        background-color: #f0f0f0; 
+    }
+
+    h1 {
+        font-size: 24px; 
+        color: #000000; 
+    }
+
+    .text-section {
+        width: 90%; 
+        padding: 0.5rem; 
+        margin: 0 auto; 
+    }
+
+    .box-section {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .box {
+        width: 100px;
+        height: 100px; 
+        font-size: 14px;
+    }
+
+    .position-section {
+        margin: 1rem 0; 
+    }
+
+    .relativo {
+        height: auto; 
+        padding: 10px; 
+    }
+
+    .absoluto {
+        top: 10px; 
+        left: 10px; 
+        padding: 5px; 
+    }
+}
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem; 
+    padding: 1rem; 
+}
+
+
+.grid-item {
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 1rem; 
+    text-align: center; 
+    border: 2px solid #333; 
+    font-size: 1.2rem; 
+    font-weight: bold; 
+}
+
+
+.grid-container {
+    max-width: 1000px; 
+    margin: 0 auto; 
+}
+
+
+
+/* Estilos para el div cuadrado con animación */
+.animacion {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db; /* Color inicial */
+    transition: background-color 0.5s ease; /* Transición de color suave */
+}
+
+/* Estilos para el div cuadrado con animación en hover */
+.animacion:hover {
+    background-color: #e74c3c; /* Nuevo color al hacer hover */
+}
+
+/* Estilos para el div circular con animación */
+.mover {
+    width: 100px;
+    height: 100px;
+    background-color: #2ecc71;
+    border-radius: 50%; /* Hacerlo circular */
+    animation: moverIdaVuelta 2s ease-in-out infinite; /* Animación de ida y vuelta */
+}
+
+/* Definir la animación con @keyframes */
+@keyframes moverIdaVuelta {
+    0% {
+        transform: translateX(0); /* Posición inicial */
+    }
+    50% {
+        transform: translateX(300px); /* Mover 300px a la derecha */
+    }
+    100% {
+        transform: translateX(0); /* Regresar a la posición inicial */
+    }
+}
